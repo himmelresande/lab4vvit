@@ -25,6 +25,6 @@ def login():
     if records:
         return render_template('account.html', full_name=records[0][1], login=records[0][2], password=records[0][3])
     elif username == "" or password == "":
-        return render_template('not_blank.html', error='log or pas must be not blank')
+        return render_template('not_blank.html', error='log or pass must be not blank')
     else:
         return render_template('no_user.html', error='wrong login or password')
